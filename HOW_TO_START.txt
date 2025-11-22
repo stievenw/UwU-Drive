@@ -1,8 +1,15 @@
-Edit main.py
-# Security Configuration
-ALLOWED_HOSTS = ['127.0.0.1']
---------------------------------------------------------------------------------------------
-Run on Powershell
-$process = Start-Process python -ArgumentList "server.py" -NoNewWindow -PassThru
-or
-start_server.ps1 run with Powershell
+# How to Start the Server
+
+1. Edit main.py
+   Update the security configuration:
+
+   ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+2. Run using PowerShell:
+
+   # Option 1: Run server.py directly
+   $process = Start-Process python -ArgumentList "server.py" -NoNewWindow -PassThru
+
+   # Option 2: Use the start_server.ps1 script
+   Run:
+   ./start_server.ps1
